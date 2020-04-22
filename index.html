@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<head>
+    <title>work page</title>
+    <link id="pageStyle" href="Joe.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+</head>
+
+<body>
+    <div class="J1">
+        CR CALCULATOR
+    </div>
+    <div class="row">
+        <div class="column">
+            <br />
+
+
+            Hit Points:<br /> <input type="number" id="hpVal" value="75" /><br />
+            Damage per Round:<br /> <input type="number" id="dprVal" value="10" /><br />
+            Armor Class: <br /> <input type="number" id="acVal" value="13" /><br />
+            Attacks using: <br />
+            <select id="atkMethod">
+                <option value="Atk">Attack bonus</option>
+                <option value="Sth">Saving Throw</option>
+            </select>Of:<br />
+            <input type="number" id="atkVal" value="3" />
+            <br /><br />
+
+            <input type="submit" value="Enter" onclick="finalButton()"><br />
+            <p id="finalFig"></p>
+        </div>
+        <div class="column">
+            <p align="center">Recommended Stats per CR level</p>
+            <table style="width:100%">
+                <tr>
+                    <th>Challenge rating</th>
+                    <th>Hit points</th>
+                    <th>Damage per round</th>
+                    <th>Armor class</th>
+                    <th>Attack bonus</th>
+                    <th>Save DC</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1-6</td>
+                    <td>0-1</td>
+                    <td><= 13</td>
+                    <td><= 3</td>
+                    <td><= 13</td>
+                </tr>
+                <tr>
+                    <td>1/8</td>
+                    <td>7-35</td>
+                    <td>2-3</td>
+                    <td>13</td>
+                    <td>3</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>1/4</td>
+                    <td>36-49</td>
+                    <td>4-5</td>
+                    <td>13</td>
+                    <td>3</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>1/2</td>
+                    <td>50-70</td>
+                    <td>6-13</td>
+                    <td>13</td>
+                    <td>3</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>71-85</td>
+                    <td>9-14</td>
+                    <td>13</td>
+                    <td>3</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>86-100</td>
+                    <td>15-20</td>
+                    <td>13</td>
+                    <td>3</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>101-115</td>
+                    <td>21-26</td>
+                    <td>13</td>
+                    <td>4</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>116-130</td>
+                    <td>27-32</td>
+                    <td>14</td>
+                    <td>5</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>131-145</td>
+                    <td>33-38</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>146-160</td>
+                    <td>39-44</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>161-175</td>
+                    <td>45-50</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>176-190</td>
+                    <td>51-56</td>
+                    <td>16</td>
+                    <td>7</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>191-205</td>
+                    <td>57-62</td>
+                    <td>16</td>
+                    <td>7</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>206-220</td>
+                    <td>63-68</td>
+                    <td>17</td>
+                    <td>7</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>221-235</td>
+                    <td>69-74</td>
+                    <td>17</td>
+                    <td>8</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>236-250</td>
+                    <td>75-80</td>
+                    <td>17</td>
+                    <td>8</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>251-265</td>
+                    <td>81-86</td>
+                    <td>18</td>
+                    <td>8</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>266-280</td>
+                    <td>87-92</td>
+                    <td>18</td>
+                    <td>8</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>281-295</td>
+                    <td>93-98</td>
+                    <td>18</td>
+                    <td>8</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>296-310</td>
+                    <td>99-104</td>
+                    <td>18</td>
+                    <td>3</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>311-325</td>
+                    <td>105-110</td>
+                    <td>19</td>
+                    <td>10</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>326-340</td>
+                    <td>111-116</td>
+                    <td>19</td>
+                    <td>10</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>341-355</td>
+                    <td>117-122</td>
+                    <td>19</td>
+                    <td>10</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>356-400</td>
+                    <td>123-140</td>
+                    <td>19</td>
+                    <td>10</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>401-445</td>
+                    <td>141-158</td>
+                    <td>19</td>
+                    <td>11</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>446-490</td>
+                    <td>159-176</td>
+                    <td>19</td>
+                    <td>11</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>491-535</td>
+                    <td>177-194</td>
+                    <td>19</td>
+                    <td>11</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>536-580</td>
+                    <td>195-212</td>
+                    <td>19</td>
+                    <td>12</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>581-625</td>
+                    <td>213-230</td>
+                    <td>19</td>
+                    <td>12</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>626-670</td>
+                    <td>231-248</td>
+                    <td>19</td>
+                    <td>12</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>671-715</td>
+                    <td>249-266</td>
+                    <td>19</td>
+                    <td>13</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>716-760</td>
+                    <td>267-284</td>
+                    <td>22</td>
+                    <td>13</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>761-805</td>
+                    <td>285-302</td>
+                    <td>19</td>
+                    <td>13</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>806-850</td>
+                    <td>303-320</td>
+                    <td>19</td>
+                    <td>14</td>
+                    <td>23</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    
+    <script src="crcalc.js"></script>
+    
+</body>

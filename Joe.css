@@ -1,0 +1,35 @@
+Body {
+    font-family: Calibri;
+    padding: 14px;
+    color: black;
+    background-color: #FDF1DD;
+    text-decoration: none;
+    margin: auto;
+}
+
+.J1 {
+    background-color: #8C2B2E;
+    color: black;
+    font-size: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: whitesmoke;
+} 
+
+td {
+    background-color: white;
+}
